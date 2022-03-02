@@ -2,7 +2,7 @@
 
 ## Running pgsql server
 
-### Start single docker container
+Start single docker container
 ```bash
 $ docker container run --rm -d --name pgsql -e POSTGRES_PASSWORD=pass -p 5432:5432 postgres:alpine
 
@@ -10,28 +10,28 @@ CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS
 c3bddf6c5b5b   postgres:alpine   "docker-entrypoint.s…"   3 seconds ago   Up 2 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   pgsql
 ```
 
-### Login with postgres user
+Login with postgres user
 ```bash
 docker container exec -ti pgsql psql -U postgres
 ```
 
 ## Basics
 
-### List databases
+List databases
 ```bash
 \l
 ```
 
-### Connect do specific database
+Connect do specific database
 ```bash
 \c DATABASE_NAME;
 ```
 
-### List tables on current database
+List tables on current database
 ```bash
 \dt+
 ```
-### Get table info
+Get table info
 ```bash
 \d+ TABLE_NAME
 ```
