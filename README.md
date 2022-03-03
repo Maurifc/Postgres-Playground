@@ -10,7 +10,13 @@ CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS
 c3bddf6c5b5b   postgres:alpine   "docker-entrypoint.s…"   3 seconds ago   Up 2 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   pgsql
 ```
 
-Login with postgres user
+
+Login with postgres client (password = **pass**)
+```bash
+psql -h localhost -U postgres
+```
+
+Login without postgres user
 ```bash
 docker container exec -ti pgsql psql -U postgres
 ```
@@ -31,7 +37,7 @@ List tables on current database
 ```bash
 \dt+
 ```
-Get table info
+Get fields' datailed info 
 ```bash
 \d+ TABLE_NAME
 ```
