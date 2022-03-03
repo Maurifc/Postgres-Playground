@@ -4,19 +4,19 @@
 
 Dump from remote server
 ```bash
-pg_dump -h <REMOTE_HOST> -p <PORT> -U <USER> -f backup_file_name.bak DATABASE_NAME 
+pg_dump -h <REMOTE_HOST> -p <PORT> -U <USER> -f backup_file_name.sql DATABASE_NAME 
 ```
 
 Dump local
 ```bash
-pg_dump -c -C -F p -f backup_file_name.bak.sql DATABASE_NAME
+pg_dump -c -C -F p -f backup_file_name.sql DATABASE_NAME
 ```
 
 ## Restore
 
 Restore from backup file (.sql)
 ```bash
-psql -U username -f filename.sql
+psql -U username -d DB_NAME -f filename.sql 
 ```
 
 Restore from custom archive backup file (.bak)
