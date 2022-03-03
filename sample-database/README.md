@@ -11,7 +11,7 @@ CREATE DATABASE [IF NOT EXISTS] dvdrental;
 
 Restore from .tar file
 ```bash
-pg_restore -U postgres -d dvdrental C:\sampledb\dvdrental.tar
+pg_restore -U postgres -d dvdrental dvdrental.tar
 ```
 
 ## Diagram
